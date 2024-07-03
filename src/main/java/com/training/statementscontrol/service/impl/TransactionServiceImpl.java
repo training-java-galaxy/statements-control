@@ -4,6 +4,7 @@ package com.training.statementscontrol.service.impl;
 import com.training.statementscontrol.enums.TransactionType;
 import com.training.statementscontrol.model.Transaction;
 import com.training.statementscontrol.model.User;
+import com.training.statementscontrol.service.TransactionService;
 import com.training.statementscontrol.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import java.util.UUID;
  * Servicio para manejar las operaciones relacionadas con transacciones.
  */
 @Service
-public class TransactionServiceImpl {
+public class TransactionServiceImpl implements TransactionService {
     private final List<Transaction> transactions = new ArrayList<>();
     private final UserService userService;
 
@@ -48,7 +49,7 @@ public class TransactionServiceImpl {
                 return null;
         }
 
-        Transaction transaction = new Transaction(userId, type, amount);
+        Transaction transaction = new Transaction(userId.toString(), type, amount);
         transactions.add(transaction);
         return transaction;
     }
@@ -66,3 +67,4 @@ public class TransactionServiceImpl {
     public List<Transaction> getAllTransactions() {
         return transactions;
     }
+}

@@ -1,6 +1,7 @@
 package com.training.statementscontrol;
 
 import com.training.statementscontrol.enums.TransactionType;
+import com.training.statementscontrol.model.User;
 import com.training.statementscontrol.service.UserService;
 import com.training.statementscontrol.service.impl.TransactionServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;

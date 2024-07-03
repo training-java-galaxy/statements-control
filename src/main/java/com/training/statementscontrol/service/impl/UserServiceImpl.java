@@ -1,6 +1,8 @@
 package com.training.statementscontrol.service.impl;
 
 import com.training.statementscontrol.model.User;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +12,8 @@ import java.util.UUID;
 /**
  * Servicio para manejar las operaciones relacionadas con usuarios.
  */
+@Getter
+@Setter
 @Service
 public class UserServiceImpl {
     private final List<User> users = new ArrayList<>();
