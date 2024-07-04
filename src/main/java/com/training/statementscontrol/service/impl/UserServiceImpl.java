@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         User user = getUserById(id);
         if (user != null) {
             user.setBalance(newBalance);
-            return true;
+            return;
         }
         return false;
     }
