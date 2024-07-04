@@ -26,7 +26,7 @@ public class TransactionServiceImpl implements TransactionService {
 
     public Transaction createTransaction(UUID userId, TransactionType type, double amount) {
         User user = userService.getUserById(userId);
-        if (user == null) {
+        if (null == user) {
             return null;
         }
 
