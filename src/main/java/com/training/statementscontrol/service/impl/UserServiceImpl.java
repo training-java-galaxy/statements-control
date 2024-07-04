@@ -40,8 +40,9 @@ public class UserServiceImpl implements UserService {
 
     public boolean updateUserBalance(UUID id, double newBalance) {
         User user = getUserById(id);
-        if (user != null) {
+        if (null != user ) {
             user.setBalance(newBalance);
+            System.out.println("sopas");
             return;
         }
         return false;
