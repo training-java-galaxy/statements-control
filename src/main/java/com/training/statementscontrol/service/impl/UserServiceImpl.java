@@ -1,6 +1,7 @@
 package com.training.statementscontrol.service.impl;
 
 import com.training.statementscontrol.model.User;
+import com.training.statementscontrol.service.UserService;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.stereotype.Service;
@@ -15,11 +16,11 @@ import java.util.UUID;
 @Getter
 @Setter
 @Service
-public class UserServiceImpl {
+public class UserServiceImpl implements UserService {
     private final List<User> users = new ArrayList<>();
 
     public User createUser(String name, double balance) {
-        User user = new User(name, balance);
+        User user = new User(UUID.randomUUID(), name);
         users.add(user);
         return user;
     }

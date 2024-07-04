@@ -1,13 +1,17 @@
 package com.training.statementscontrol.service;
 
 import com.training.statementscontrol.model.User;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
+
+
 public interface UserService {
 
     public User createUser(String name, double balance);
+
 
 
     public User getUserById(UUID id);
