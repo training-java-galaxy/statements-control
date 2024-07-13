@@ -53,6 +53,10 @@ public class StatementsControlApplication implements CommandLineRunner {
         System.out.println(message);
 
         // for loop
+        for (int i = 1; i <=5; i++) {
+            System.out.println("Iteración decremento: " + i);
+        }
+
         for (int i = 10; i > 5; i--) {
             System.out.println("Iteración decremento: " + i);
         }
